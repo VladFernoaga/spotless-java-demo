@@ -8,7 +8,7 @@
 		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.fernoaga.</groupId>
+	<groupId>com.fernoaga</groupId>
 	<artifactId>spotless-java-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spotless-demo-project</name>
@@ -44,11 +44,20 @@
 			</plugin>
 
 			<plugin>
+
 				<groupId>com.diffplug.spotless</groupId>
 				<artifactId>spotless-maven-plugin</artifactId>
 				<version>${spotless.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
-					<!-- define a language-specific format -->
+					<ratchetFrom>HEAD</ratchetFrom>
+
 					<java>
 						<toggleOffOn />
 						<importOrder />
@@ -61,5 +70,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 </project>

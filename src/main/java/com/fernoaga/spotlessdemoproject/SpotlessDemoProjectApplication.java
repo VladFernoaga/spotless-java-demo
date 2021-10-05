@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpotlessDemoProjectApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(SpotlessDemoProjectApplication.class, args);
+         SpringApplication.run(SpotlessDemoProjectApplication.class, args);
   }
 
 }
